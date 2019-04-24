@@ -66,3 +66,9 @@ defaults:
 
 future: false
 timezone: America/Chicago
+
+exclude:
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
