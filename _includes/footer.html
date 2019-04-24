@@ -1,0 +1,13 @@
+<hr>
+
+<div>
+	{% assign current_year = 'now' | date: '%Y' %}
+	&copy;
+	{{ site.copyright_year }}
+	{% if site.copyright_year != current_year %}
+		- {{ current_year }}
+	{% endif %}
+	{{ site.company_name }}. All Rights Reserved.
+</div>
+
+<!-- TODO add social links -->

@@ -1,1 +1,68 @@
-theme: jekyll-theme-cayman
+title: Wugborium
+
+copyright_year: "2019"
+company_name: Wugborium, LLC
+
+email: brandon.felch@wugborium.com
+description: >-
+  Explore what inspires you.
+
+quote: >-
+  Eat a live frog first thing in the morning and nothing worse will happen to you the rest of the day.
+author: Mark Twain
+
+baseurl: ""
+url: ""
+excerpt_separator: <!-- more -->
+
+social:
+    # type: sitename
+    # url: https://sitename.com
+    # display: false
+  -
+    type: youtube
+    url: https://youtube.com/channel/UCnzrt40jUOSirvUjzfzlpug
+  -
+    type: twitter
+    username: EatTheFrogLLC
+    url: https://twitter.com/
+  -
+    type: github
+    username: bfelch
+    url: https://github.com/
+
+collections:
+  adventures:
+  projects:
+
+defaults:
+  -
+    scope:
+      type: posts
+    values:
+      permalink: /:categories/:title
+      layout: post
+  -
+    scope:
+      path: _posts/adventures
+    values:
+      layout: adventure
+      categories: adventures
+  -
+    scope:
+      path: _posts/projects
+    values:
+      layout: project
+  -
+    scope:
+      path: _posts/projects/games
+    values:
+      categories: projects games
+  -
+    scope:
+      path: _posts/projects/props
+    values:
+      categories: projects props
+
+future: false
+timezone: America/Chicago

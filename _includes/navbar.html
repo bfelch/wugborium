@@ -1,0 +1,27 @@
+<nav>
+	<a href='/'>{{ site.title }}</a>
+
+	<ul>
+		{% for collection in site.collections %}
+			{% if collection.label != 'posts' %}
+				<li>
+					<a href='/{{ collection.label }}'>
+						{{ collection.label | capitalize }}
+					</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+
+	<div>
+		{% for social in site.social %}
+			{% if social.display != false %}
+				<a href='{{social.url | escape}}{{social.username}}'>
+					<svg class='svg-icon' width='25px' height='25px'>
+						<image width='100%' height='100%' xlink:href='/img/social/{{social.type}}_icon.svg' />
+					</svg>
+				</a>
+			{% endif %}
+		{% endfor %}
+	</div>
+</nav>
